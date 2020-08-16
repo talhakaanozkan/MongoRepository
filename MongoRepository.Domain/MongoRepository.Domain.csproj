@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Product>MongoRepository.Domain</Product>
+    <Authors>Talha Kaan Özkan</Authors>
+    <Company>Talha Kaan ÖzkanTalha Kaan Özkan</Company>
+    <PackageProjectUrl>https://github.com/talhakaanozkan/MongoRepositoryNetCore2.2</PackageProjectUrl>
+    <Description>This easy to use library implements the repository pattern on top of Official MongoDB C# driver.</Description>
+    <Copyright>talhakaanozkan</Copyright>
+    <Version>2.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Bson" Version="2.11.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.0" />
+  </ItemGroup>
+
+</Project>
