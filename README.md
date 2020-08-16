@@ -1,9 +1,9 @@
 # Mongo Repository
-![](https://i.imgur.com/Rx80iCa.png)
+![](https://i.imgur.com/fk7d73c.png)
 <center>This easy to use library implements the repository pattern on top of Official MongoDB C# driver.
 This project works .NET Core 3.1 and greater</center>
 
-# DB Connector
+## DB Connector
 
 You can connect DB with `MongoRepositoryPattern` also more than one methods 
 
@@ -26,7 +26,7 @@ MongoRepositoryPattern Connector = new MongoRepositoryPattern(new MongoDataConte
 ```
 
 
-# Methods
+## Methods
 
 <details>
   <summary>Collection</summary>
@@ -147,7 +147,7 @@ ISingleResult<UpdateResult> Update<Model>(FilterDefinition<Model> filter, Update
 ```
 </details>
 
-# Sample for ASP.NET MVC Core
+## Sample for ASP.NET MVC Core
 
 ```csharp
 [HttpPost]
