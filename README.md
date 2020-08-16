@@ -1,7 +1,7 @@
 # Mongo Repository
-![](https://i.imgur.com/fk7d73c.png)
-<center>This easy to use library implements the repository pattern on top of Official MongoDB C# driver.
-This project works .NET Core 3.1 and greater</center>
+![](https://i.imgur.com/9NEK8yv.png)
+This easy to use library implements the repository pattern on top of Official MongoDB C# driver.
+This project works .NET Core 3.1 and greater
 
 ## DB Connector
 
