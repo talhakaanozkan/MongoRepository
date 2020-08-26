@@ -2,18 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <PackageId>MongoRepositoryPersistence</PackageId>
+    <PackageId>MongoRepository.Persistence</PackageId>
     <Authors>Talha Kaan Özkan</Authors>
     <Company></Company>
-    <Product>MongoRepositoryPersistence</Product>
+    <Product>MongoRepository.Persistence</Product>
     <IsPackable>true</IsPackable>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>This easy to use library implements the repository pattern on top of Official MongoDB C# driver.</Description>
     <Copyright>talhakaanozkan</Copyright>
-    <PackageIcon>nuget-icon.png</PackageIcon>
+    <PackageIcon>24568732.png</PackageIcon>
     <PackageIconUrl />
     <PackageProjectUrl>https://github.com/talhakaanozkan/MongoRepositoryNetCore2.2</PackageProjectUrl>
-    <Version>2.0.0</Version>
+    <Version>2.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\talhakaanozkan\Desktop\nuget-icon.png">
+    <None Include="..\..\..\24568732.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
