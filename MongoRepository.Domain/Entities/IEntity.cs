@@ -10,7 +10,7 @@ namespace MongoRepository.Domain.Entities
         TKey _id { get; set; }
         TStatus Status { get; set; }
         TDateTime CreatedAt { get; set; }
-        TDateTime UpdateAt { get; set; }
+        TDateTime UpdatedAt { get; set; }
     }
 
     public abstract class Base : IEntity<string, Status, DateTime>
@@ -19,7 +19,7 @@ namespace MongoRepository.Domain.Entities
         public string _id { get; set; } = Guid.NewGuid().ToString("N");
         public Status Status { get; set; } = Status.Passive;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime UpdateAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
     }
 
     public enum Status

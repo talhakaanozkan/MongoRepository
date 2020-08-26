@@ -9,7 +9,7 @@ namespace MongoRepository.Domain.Entities
     {
         string Message { get; set; }
 
-        bool DidError { get; set; }
+        bool HasError { get; set; }
     }
 
     public interface ISingleResult<TModel> : IResult
@@ -26,14 +26,14 @@ namespace MongoRepository.Domain.Entities
     {
         public string Message { get; set; } = string.Empty;
 
-        public bool DidError { get; set; } = false;
+        public bool HasError { get; set; } = false;
     }
 
     public class SingleResult<TModel> : ISingleResult<TModel>
     {
         public string Message { get; set; } = string.Empty;
 
-        public bool DidError { get; set; } = false;
+        public bool HasError { get; set; } = false;
 
         public TModel Model { get; set; } = default;
     }
@@ -42,7 +42,7 @@ namespace MongoRepository.Domain.Entities
     {
         public string Message { get; set; } = string.Empty;
 
-        public bool DidError { get; set; } = false;
+        public bool HasError { get; set; } = false;
 
         public IEnumerable<TModel> Model { get; set; } = Enumerable.Empty<TModel>();
     }

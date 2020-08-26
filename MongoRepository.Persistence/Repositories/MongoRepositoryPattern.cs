@@ -69,7 +69,7 @@ namespace MongoRepository.Persistence.Repositories
                 if (!Guid.TryParse(model._id, out Guid NewGuid))
                     throw new ArgumentNullException("Model ID format is wrong");
 
-                model.UpdateAt = DateTime.Now;
+                model.UpdatedAt = DateTime.Now;
 
                 await MongoDatabase.GetCollection<Model>(String.IsNullOrEmpty(collectionName) ? CollectionName<Model>() : collectionName).InsertOneAsync(model);
 
@@ -77,14 +77,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -102,7 +102,7 @@ namespace MongoRepository.Persistence.Repositories
                     if (!Guid.TryParse(model._id, out Guid NewGuid))
                         throw new ArgumentNullException("Model ID format is wrong");
 
-                models.ForEach(x => x.UpdateAt = DateTime.Now);
+                models.ForEach(x => x.UpdatedAt = DateTime.Now);
 
                 await MongoDatabase.GetCollection<Model>(String.IsNullOrEmpty(collectionName) ? CollectionName<Model>() : collectionName).InsertManyAsync(models);
 
@@ -110,14 +110,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -136,14 +136,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -161,14 +161,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -187,14 +187,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -212,14 +212,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -237,14 +237,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -263,14 +263,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -288,14 +288,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -314,14 +314,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -339,14 +339,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -364,14 +364,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -390,14 +390,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -416,14 +416,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -442,14 +442,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -469,14 +469,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -494,14 +494,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -520,10 +520,10 @@ namespace MongoRepository.Persistence.Repositories
                 if (!Guid.TryParse(model._id, out Guid NewGuid))
                     throw new ArgumentNullException("Model ID format is wrong");
 
-                if (string.IsNullOrWhiteSpace(model._id))                
-                    model._id = Guid.NewGuid().ToString();
-                
-                model.UpdateAt = DateTime.Now;
+                if (string.IsNullOrWhiteSpace(model._id))
+                    model._id = Guid.NewGuid().ToString("N");
+
+                model.UpdatedAt = DateTime.Now;
 
                 await MongoDatabase.GetCollection<Model>(String.IsNullOrEmpty(collectionName) ? CollectionName<Model>() : collectionName).ReplaceOneAsync(
                     c => c._id.Equals(model._id),
@@ -537,14 +537,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -558,7 +558,7 @@ namespace MongoRepository.Persistence.Repositories
 
             try
             {
-                update.Set(x => x.UpdateAt, DateTime.Now);
+                update.Set(x => x.UpdatedAt, DateTime.Now);
 
                 if (multi)
                 {
@@ -583,14 +583,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -612,7 +612,7 @@ namespace MongoRepository.Persistence.Repositories
                 if (!Guid.TryParse(model._id, out Guid NewGuid))
                     throw new ArgumentNullException("Model ID format is wrong");
 
-                model.UpdateAt = DateTime.Now;
+                model.UpdatedAt = DateTime.Now;
 
                 MongoDatabase.GetCollection<Model>(String.IsNullOrEmpty(collectionName) ? CollectionName<Model>() : collectionName).InsertOne(model);
 
@@ -620,14 +620,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -645,7 +645,7 @@ namespace MongoRepository.Persistence.Repositories
                     if (!Guid.TryParse(model._id, out Guid NewGuid))
                         throw new ArgumentNullException("Model ID format is wrong");
 
-                models.ForEach(x => x.UpdateAt = DateTime.Now);
+                models.ForEach(x => x.UpdatedAt = DateTime.Now);
 
                 MongoDatabase.GetCollection<Model>(String.IsNullOrEmpty(collectionName) ? CollectionName<Model>() : collectionName).InsertMany(models);
 
@@ -653,14 +653,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -679,14 +679,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -704,14 +704,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -730,14 +730,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -755,14 +755,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -780,14 +780,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -806,14 +806,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -832,14 +832,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -858,14 +858,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -883,14 +883,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -908,14 +908,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -934,14 +934,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -960,14 +960,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -986,14 +986,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -1013,14 +1013,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -1038,14 +1038,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -1067,7 +1067,7 @@ namespace MongoRepository.Persistence.Repositories
                 if (string.IsNullOrWhiteSpace(model._id))                
                     model._id = Guid.NewGuid().ToString("N");
                 
-                model.UpdateAt = DateTime.Now;
+                model.UpdatedAt = DateTime.Now;
 
                 MongoDatabase.GetCollection<Model>(String.IsNullOrEmpty(collectionName) ? CollectionName<Model>() : collectionName).ReplaceOne(
                     c => c._id.Equals(model._id),
@@ -1081,14 +1081,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
@@ -1102,7 +1102,7 @@ namespace MongoRepository.Persistence.Repositories
 
             try
             {
-                update.Set(x => x.UpdateAt, DateTime.Now);
+                update.Set(x => x.UpdatedAt, DateTime.Now);
 
                 if (multi)
                 {
@@ -1127,14 +1127,14 @@ namespace MongoRepository.Persistence.Repositories
             }
             catch (MongoException ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = "Error occurred while MongoDB Query";
 
                 Log.Logger?.Fatal(ex.Message);
             }
             catch (Exception ex)
             {
-                response.DidError = true;
+                response.HasError = true;
                 response.Message = $"MongoRepository Exception: {ex.Message}";
 
                 Log.Logger?.Fatal(ex.Message);
